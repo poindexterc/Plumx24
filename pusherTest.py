@@ -18,7 +18,8 @@ def main():
     while inputdata != "q":
         inputdata = raw_input("- Press enter to send pusher data - ")
         if inputdata != "q":
-            pusherPushData("testchannel", "Test", random.randint(1,9), random.randint(10,19), random.randint(20,29), random.randint(30,39), "j")
+            alpha = ["a", "b", "c"]
+            pusherPushData("testchannel", "addChar", 12, 12, random.randint(20,29), random.randint(30,39), alpha[random.randint(0,2)])
 
 
 

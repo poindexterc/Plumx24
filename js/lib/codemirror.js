@@ -296,6 +296,10 @@ window.CodeMirror = (function() {
       setLine: operation(function(line, text) {
         if (isLine(line)) replaceRange(text, {line: line, ch: 0}, {line: line, ch: getLine(line).text.length});
       }),
+      setLineChar: operation(function(line, char, text) {
+        replaceRange(text, {line: line, ch: char}, {line: line, ch: char+1});
+      }),
+      
       removeLine: operation(function(line) {
         if (isLine(line)) replaceRange("", {line: line, ch: 0}, clipPos({line: line+1, ch: 0}));
       }),

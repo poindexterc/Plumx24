@@ -76,9 +76,12 @@
         lineNumbers: true,
         //extraKeys: {"Tab": "autocomplete"},
         lineWrapping: true,
-        onGutterClick: foldFunc
+        onGutterClick: foldFunc,
+        onChange: changedStuff
       });
-          
+      function changedStuff(instance, secondObject) {
+        console.log(secondObject);
+      }
       function changeTheme(theme){
         editor.setOption("theme", theme);
       }

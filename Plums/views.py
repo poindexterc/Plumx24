@@ -18,7 +18,7 @@ def debugPrint(astring):
 
 def pusherPushData(idNum, actionType, lineLocation = None, dataLocation = None, dataChange=None):
     try:
-        p['%s'%idNum].trigger('dataPush', {"Type": actionType, "LineFrom": lineStart, "LineTo": lineEnd, "CharFrom":charStart, "CharTo":charEnd, "ChangeTo": dataChange})
+        p['%s'%str(idNum)].trigger('dataPush', {"Type": actionType, "LineFrom": lineStart, "LineTo": lineEnd, "CharFrom":charStart, "CharTo":charEnd, "ChangeTo": dataChange})
         debugPrint("Change Pushed: ID=%s TYPE=%s LINESTART=%s LINEEND=%s CHARSTART=%s CHAREND=%s CHANGE=%s" % (idNum, actionType, lineStart, lineEnd, charStart, charEnd, dataChange))
     except e:
         print("! Unexpected error:", sys.exc_info()[0])

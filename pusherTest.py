@@ -19,7 +19,7 @@ def main():
         inputdata = raw_input("- Press enter to send pusher data - ")
         if inputdata != "q":
             alpha = ["a", "b", "c"]
-            pusherPushData("testchannel", "addChar", 12, 12, random.randint(20,29), random.randint(30,39), alpha[random.randint(0,2)])
+            pusherPushData("testchannel", "addChar", 12, 12, random.randint(20,29), random.randint(30,39), "def AWESOME NAME()")
 
 
 
